@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction | Complex Numbers</title>
+  <meta name="description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction | Complex Numbers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction | Complex Numbers" />
+  
+  <meta name="twitter:description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  
+
+<meta name="author" content="Dr Emma Coutts" />
+
+
+<meta name="date" content="2022-08-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="operations.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Complex Numbers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> How to use these notes</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#history-the-imaginary-unit"><i class="fa fa-check"></i><b>2.1</b> History, the imaginary unit</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#the-rectangular-form-argand-diagrams"><i class="fa fa-check"></i><b>2.2</b> The rectangular form, Argand diagrams</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="operations.html"><a href="operations.html"><i class="fa fa-check"></i><b>3</b> Operations</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="operations.html"><a href="operations.html#addition-and-subtraction"><i class="fa fa-check"></i><b>3.1</b> Addition and subtraction</a></li>
+<li class="chapter" data-level="3.2" data-path="operations.html"><a href="operations.html#multiplication"><i class="fa fa-check"></i><b>3.2</b> Multiplication</a></li>
+<li class="chapter" data-level="3.3" data-path="operations.html"><a href="operations.html#complex-conjugate-modulus-and-division"><i class="fa fa-check"></i><b>3.3</b> Complex conjugate, modulus and division</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="polar-form.html"><a href="polar-form.html"><i class="fa fa-check"></i><b>4</b> Polar form</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="polar-form.html"><a href="polar-form.html#converting-between-forms"><i class="fa fa-check"></i><b>4.1</b> Converting between forms</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="polar-form.html"><a href="polar-form.html#finding-theta"><i class="fa fa-check"></i><b>4.1.1</b> Finding <span class="math inline">\(\theta\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html"><i class="fa fa-check"></i><b>5</b> De Moivre, Euler, roots</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#de-moivres-formula"><i class="fa fa-check"></i><b>5.1</b> De Moivre’s Formula</a></li>
+<li class="chapter" data-level="5.2" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#eulers-formula"><i class="fa fa-check"></i><b>5.2</b> Euler’s Formula</a></li>
+<li class="chapter" data-level="5.3" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.3</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="5.4" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#finding-the-roots"><i class="fa fa-check"></i><b>5.4</b> Finding the roots</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="practice-problems.html"><a href="practice-problems.html"><i class="fa fa-check"></i><b>6</b> Practice Problems</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="practice-problems.html"><a href="practice-problems.html#solving-quadratic-equations"><i class="fa fa-check"></i><b>6.1</b> Solving quadratic equations</a></li>
+<li class="chapter" data-level="6.2" data-path="practice-problems.html"><a href="practice-problems.html#argand-diagrams"><i class="fa fa-check"></i><b>6.2</b> Argand diagrams</a></li>
+<li class="chapter" data-level="6.3" data-path="practice-problems.html"><a href="practice-problems.html#addition"><i class="fa fa-check"></i><b>6.3</b> Addition</a></li>
+<li class="chapter" data-level="6.4" data-path="practice-problems.html"><a href="practice-problems.html#multiplication-1"><i class="fa fa-check"></i><b>6.4</b> Multiplication</a></li>
+<li class="chapter" data-level="6.5" data-path="practice-problems.html"><a href="practice-problems.html#complex-conjugate-and-division"><i class="fa fa-check"></i><b>6.5</b> Complex conjugate and division</a></li>
+<li class="chapter" data-level="6.6" data-path="practice-problems.html"><a href="practice-problems.html#polar-co-ordinates"><i class="fa fa-check"></i><b>6.6</b> Polar co-ordinates</a></li>
+<li class="chapter" data-level="6.7" data-path="practice-problems.html"><a href="practice-problems.html#de-moivres-theorem"><i class="fa fa-check"></i><b>6.7</b> de Moivre’s theorem</a></li>
+<li class="chapter" data-level="6.8" data-path="practice-problems.html"><a href="practice-problems.html#applications-to-trigonometric-identities"><i class="fa fa-check"></i><b>6.8</b> Applications to trigonometric identities</a></li>
+<li class="chapter" data-level="6.9" data-path="practice-problems.html"><a href="practice-problems.html#roots"><i class="fa fa-check"></i><b>6.9</b> Roots</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="problem-solutions.html"><a href="problem-solutions.html"><i class="fa fa-check"></i><b>7</b> Problem Solutions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="problem-solutions.html"><a href="problem-solutions.html#solving-quadratic-equations-1"><i class="fa fa-check"></i><b>7.1</b> Solving quadratic equations</a></li>
+<li class="chapter" data-level="7.2" data-path="problem-solutions.html"><a href="problem-solutions.html#argand-diagrams-1"><i class="fa fa-check"></i><b>7.2</b> Argand diagrams</a></li>
+<li class="chapter" data-level="7.3" data-path="problem-solutions.html"><a href="problem-solutions.html#addition-1"><i class="fa fa-check"></i><b>7.3</b> Addition</a></li>
+<li class="chapter" data-level="7.4" data-path="problem-solutions.html"><a href="problem-solutions.html#multiplication-2"><i class="fa fa-check"></i><b>7.4</b> Multiplication</a></li>
+<li class="chapter" data-level="7.5" data-path="problem-solutions.html"><a href="problem-solutions.html#complex-conjugate-and-division-1"><i class="fa fa-check"></i><b>7.5</b> Complex conjugate and division</a></li>
+<li class="chapter" data-level="7.6" data-path="problem-solutions.html"><a href="problem-solutions.html#polar-co-ordinates-1"><i class="fa fa-check"></i><b>7.6</b> Polar co-ordinates</a></li>
+<li class="chapter" data-level="7.7" data-path="problem-solutions.html"><a href="problem-solutions.html#de-moivres-theorem-1"><i class="fa fa-check"></i><b>7.7</b> de Moivre’s theorem</a></li>
+<li class="chapter" data-level="7.8" data-path="problem-solutions.html"><a href="problem-solutions.html#applications-to-trigonometric-identities-1"><i class="fa fa-check"></i><b>7.8</b> Applications to trigonometric identities</a></li>
+<li class="chapter" data-level="7.9" data-path="problem-solutions.html"><a href="problem-solutions.html#roots-1"><i class="fa fa-check"></i><b>7.9</b> Roots</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Complex Numbers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="history-the-imaginary-unit" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> History, the imaginary unit<a href="introduction.html#history-the-imaginary-unit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Complex numbers first appeared in writing in the 1500s, although they
+didn’t become widely accepted until the 1800s. The main motivation for
+their definition comes from finding solutions to quadratic and cubic
+equations.<br />
+One of the easiest examples is probably <span class="math inline">\(x^2 + x + 1 = 0\)</span>. We cannot
+factorize it using real numbers, so we need to apply the quadratic
+formula <span class="math display">\[x_{1, 2} = \frac{- b \pm \sqrt{b^2 - 4 ac}}{2 a}\]</span> with
+<span class="math inline">\(a = b = c = 1\)</span>. Plugging the numbers in we get <span class="math inline">\(x_{1, 2} \frac{- 1 \pm \sqrt{- 3}}{2}\)</span>.<br />
+The problematic part is <span class="math inline">\(\sqrt{- 3}\)</span>, since the square root was defined
+only for non-negative real numbers. We introduce a special unit, called
+the imaginary unit, denoted <span class="math inline">\(i\)</span> (NOTE that in some disciplines the
+symbol <span class="math inline">\(j\)</span> is used).</p>
+<div class="tmframed">
+<p>Definition: <span class="math display">\[i^2 = - 1\]</span></p>
+</div>
+<p> </p>
+<p>Then we can write <span class="math inline">\(\sqrt{- 3} = \sqrt{- 1 \cdot 3} = \sqrt{- 1} \cdot \sqrt{3} = i \sqrt{3}\)</span> to find the square root. The roots of the
+polynomial are therefore <span class="math inline">\(x_{1, 2} = \frac{- 1 \pm i \sqrt{3}}{2}\)</span>.</p>
+<p>Since <span class="math inline">\(i\)</span> is defined such that <span class="math inline">\(i^2 = - 1\)</span>, it follows by the rules of
+algebra that <span class="math inline">\((- i)^2 = - 1\)</span> too. This raises questions about different
+powers of <span class="math inline">\(i\)</span>. We have</p>
+<ul>
+<li><p><span class="math inline">\(i^0 = 1\)</span>,</p></li>
+<li><p><span class="math inline">\(i^1 = i\)</span>,</p></li>
+<li><p><span class="math inline">\(i^2 = - 1\)</span>,</p></li>
+<li><p><span class="math inline">\(i^3 = i \cdot i^2 = i (- 1) = - i\)</span>,</p></li>
+<li><p><span class="math inline">\(i^4 = i^2 \cdot i^2 = (- 1) (- 1) = 1 = i^0\)</span>.</p></li>
+</ul>
+<p>We notice that we circled around and <span class="math inline">\(i^0 = i^4\)</span>.</p>
+</div>
+<div id="the-rectangular-form-argand-diagrams" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> The rectangular form, Argand diagrams<a href="introduction.html#the-rectangular-form-argand-diagrams" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In general, a complex number <span class="math inline">\(z\)</span> is written as <span class="math inline">\(z = a + bi\)</span>, where <span class="math inline">\(a\)</span>
+and <span class="math inline">\(b\)</span> are real numbers, and <span class="math inline">\(i\)</span> is the imaginary unit. <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are
+called the real and imaginary component of the complex number,
+respectively, which we write as <span class="math inline">\(Re (z) = a\)</span> and <span class="math inline">\(Im (z) = b\)</span>. We can
+describe the set of complex numbers, denoted <span class="math inline">\(\mathbb{C}\)</span>, as the set of
+all numbers of the form <span class="math inline">\(a + bi\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are real numbers and
+<span class="math inline">\(i\)</span> is the imaginary unit. In set notation, we write this as
+<span class="math display">\[\mathbb{C}= \{a + bi \hspace{0.27em} | \hspace{0.27em} a, b \in \mathbb{R},
+   \hspace{0.27em} i^2 = - 1\}\]</span> If <span class="math inline">\(b = 0\)</span>, <span class="math inline">\(z = a + 0 i = a\)</span> is a real
+number (so the real numbers are a subset of the complex numbers). If
+<span class="math inline">\(a = 0\)</span>, <span class="math inline">\(z = 0 + bi = bi\)</span> is an number.<br />
+If we take a standard Cartesian plane, with the x axis being the real
+numbers, and the y axis being the imaginary numbers, we get the . We can
+then represent complex numbers as points on the plane. A complex plane
+with complex numbers plotted on it is referred to as an .</p>
+<div class="center">
+<p> </p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="operations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Complex_notes.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ComplexNumbers .pdf", "ComplexNumbers .epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

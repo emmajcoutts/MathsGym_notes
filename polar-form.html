@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Polar form | Complex Numbers</title>
+  <meta name="description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Polar form | Complex Numbers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Polar form | Complex Numbers" />
+  
+  <meta name="twitter:description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  
+
+<meta name="author" content="Dr Emma Coutts" />
+
+
+<meta name="date" content="2022-08-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="operations.html"/>
+<link rel="next" href="de-moivre-euler-roots.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Complex Numbers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> How to use these notes</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#history-the-imaginary-unit"><i class="fa fa-check"></i><b>2.1</b> History, the imaginary unit</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#the-rectangular-form-argand-diagrams"><i class="fa fa-check"></i><b>2.2</b> The rectangular form, Argand diagrams</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="operations.html"><a href="operations.html"><i class="fa fa-check"></i><b>3</b> Operations</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="operations.html"><a href="operations.html#addition-and-subtraction"><i class="fa fa-check"></i><b>3.1</b> Addition and subtraction</a></li>
+<li class="chapter" data-level="3.2" data-path="operations.html"><a href="operations.html#multiplication"><i class="fa fa-check"></i><b>3.2</b> Multiplication</a></li>
+<li class="chapter" data-level="3.3" data-path="operations.html"><a href="operations.html#complex-conjugate-modulus-and-division"><i class="fa fa-check"></i><b>3.3</b> Complex conjugate, modulus and division</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="polar-form.html"><a href="polar-form.html"><i class="fa fa-check"></i><b>4</b> Polar form</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="polar-form.html"><a href="polar-form.html#converting-between-forms"><i class="fa fa-check"></i><b>4.1</b> Converting between forms</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="polar-form.html"><a href="polar-form.html#finding-theta"><i class="fa fa-check"></i><b>4.1.1</b> Finding <span class="math inline">\(\theta\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html"><i class="fa fa-check"></i><b>5</b> De Moivre, Euler, roots</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#de-moivres-formula"><i class="fa fa-check"></i><b>5.1</b> De Moivre’s Formula</a></li>
+<li class="chapter" data-level="5.2" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#eulers-formula"><i class="fa fa-check"></i><b>5.2</b> Euler’s Formula</a></li>
+<li class="chapter" data-level="5.3" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.3</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="5.4" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#finding-the-roots"><i class="fa fa-check"></i><b>5.4</b> Finding the roots</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="practice-problems.html"><a href="practice-problems.html"><i class="fa fa-check"></i><b>6</b> Practice Problems</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="practice-problems.html"><a href="practice-problems.html#solving-quadratic-equations"><i class="fa fa-check"></i><b>6.1</b> Solving quadratic equations</a></li>
+<li class="chapter" data-level="6.2" data-path="practice-problems.html"><a href="practice-problems.html#argand-diagrams"><i class="fa fa-check"></i><b>6.2</b> Argand diagrams</a></li>
+<li class="chapter" data-level="6.3" data-path="practice-problems.html"><a href="practice-problems.html#addition"><i class="fa fa-check"></i><b>6.3</b> Addition</a></li>
+<li class="chapter" data-level="6.4" data-path="practice-problems.html"><a href="practice-problems.html#multiplication-1"><i class="fa fa-check"></i><b>6.4</b> Multiplication</a></li>
+<li class="chapter" data-level="6.5" data-path="practice-problems.html"><a href="practice-problems.html#complex-conjugate-and-division"><i class="fa fa-check"></i><b>6.5</b> Complex conjugate and division</a></li>
+<li class="chapter" data-level="6.6" data-path="practice-problems.html"><a href="practice-problems.html#polar-co-ordinates"><i class="fa fa-check"></i><b>6.6</b> Polar co-ordinates</a></li>
+<li class="chapter" data-level="6.7" data-path="practice-problems.html"><a href="practice-problems.html#de-moivres-theorem"><i class="fa fa-check"></i><b>6.7</b> de Moivre’s theorem</a></li>
+<li class="chapter" data-level="6.8" data-path="practice-problems.html"><a href="practice-problems.html#applications-to-trigonometric-identities"><i class="fa fa-check"></i><b>6.8</b> Applications to trigonometric identities</a></li>
+<li class="chapter" data-level="6.9" data-path="practice-problems.html"><a href="practice-problems.html#roots"><i class="fa fa-check"></i><b>6.9</b> Roots</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="problem-solutions.html"><a href="problem-solutions.html"><i class="fa fa-check"></i><b>7</b> Problem Solutions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="problem-solutions.html"><a href="problem-solutions.html#solving-quadratic-equations-1"><i class="fa fa-check"></i><b>7.1</b> Solving quadratic equations</a></li>
+<li class="chapter" data-level="7.2" data-path="problem-solutions.html"><a href="problem-solutions.html#argand-diagrams-1"><i class="fa fa-check"></i><b>7.2</b> Argand diagrams</a></li>
+<li class="chapter" data-level="7.3" data-path="problem-solutions.html"><a href="problem-solutions.html#addition-1"><i class="fa fa-check"></i><b>7.3</b> Addition</a></li>
+<li class="chapter" data-level="7.4" data-path="problem-solutions.html"><a href="problem-solutions.html#multiplication-2"><i class="fa fa-check"></i><b>7.4</b> Multiplication</a></li>
+<li class="chapter" data-level="7.5" data-path="problem-solutions.html"><a href="problem-solutions.html#complex-conjugate-and-division-1"><i class="fa fa-check"></i><b>7.5</b> Complex conjugate and division</a></li>
+<li class="chapter" data-level="7.6" data-path="problem-solutions.html"><a href="problem-solutions.html#polar-co-ordinates-1"><i class="fa fa-check"></i><b>7.6</b> Polar co-ordinates</a></li>
+<li class="chapter" data-level="7.7" data-path="problem-solutions.html"><a href="problem-solutions.html#de-moivres-theorem-1"><i class="fa fa-check"></i><b>7.7</b> de Moivre’s theorem</a></li>
+<li class="chapter" data-level="7.8" data-path="problem-solutions.html"><a href="problem-solutions.html#applications-to-trigonometric-identities-1"><i class="fa fa-check"></i><b>7.8</b> Applications to trigonometric identities</a></li>
+<li class="chapter" data-level="7.9" data-path="problem-solutions.html"><a href="problem-solutions.html#roots-1"><i class="fa fa-check"></i><b>7.9</b> Roots</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Complex Numbers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="polar-form" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Polar form<a href="polar-form.html#polar-form" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>There is another way of representing complex numbers, known as . Instead
+of representing a number in the complex plane as a distance along two
+axes, polar form represents it using the straight line distance from the
+origin, denoted <span class="math inline">\(r\)</span>, or <span class="math inline">\(|z|\)</span> (for a complex number <span class="math inline">\(z\)</span>) and a rotation
+by some angle <span class="math inline">\(\theta\)</span>, counter-clockwise starting at the <span class="math inline">\(x\)</span>-axis.</p>
+<p>This box summarises the different ways to write polar form. How to get
+the modulus and Argument are described in the rest of this section.</p>
+<div class="textbox">
+<p>Polar Form:</p>
+<p><span class="math display">\[z = | z | (\cos \theta + i\sin\theta) \text{ or }z = r (\cos \theta
+     + i\sin \theta)\]</span></p>
+</div>
+<p>where, <span class="math inline">\(| z | = r\)</span> is
+the modulus of <span class="math inline">\(z\)</span> and <span class="math inline">\(\theta = \text{Arg}(z)\)</span> is
+the argument of <span class="math inline">\(z\)</span>.</p>
+<p>We have already discussed how to obtain <span class="math inline">\(|z|\)</span>, the straight line
+distance between the complex number and the origin, from a complex
+number in rectangular form: <span class="math inline">\(|z| = \sqrt{a^2 + b^2}\)</span>. We can find
+<span class="math inline">\(\theta\)</span> using basic trigonometry (more details in next section).</p>
+<div class="center">
+<div class="figure">
+<img src="Polar_argand.png" style="width:100.0%" alt="" />
+<p class="caption">Argand diagram with components
+shown.</p>
+</div>
+</div>
+<p>From the figure above, simple trigonometry can be applied to find
+expressions for the real, <span class="math inline">\(a\)</span>, and imaginary, <span class="math inline">\(b\)</span>, parts of the complex
+number - this allows us to convert from one form to the other! i.e.</p>
+<p>Thus we get the final formula for the polar form of complex numbers,
+which is <span class="math display">\[z = |z|  (\cos \theta + i \sin \theta)\]</span><br />
+<br />
+<em>: For <span class="math inline">\(\theta\)</span>, a principal value from the interval <span class="math inline">\((- \pi, \pi]\)</span> is chosen, since <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\theta + 2 k \pi\)</span> for any
+integer <span class="math inline">\(k\)</span> yield the same output when plugged into <span class="math inline">\(\sin\)</span> or <span class="math inline">\(cos\)</span></em></p>
+<div id="converting-between-forms" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Converting between forms<a href="polar-form.html#converting-between-forms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To convert a number <span class="math inline">\(z = a + bi\)</span> from rectangular form to polar form, we
+must first find <span class="math inline">\(|z|\)</span> and <span class="math inline">\(\theta\)</span>. Recall that <span class="math inline">\(|z|\)</span> is the modulus of
+the complex number, given by <span class="math inline">\(\sqrt{a^2 + b^2}\)</span>.</p>
+<div id="finding-theta" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Finding <span class="math inline">\(\theta\)</span><a href="polar-form.html#finding-theta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If you remember your definitions of trigonometric functions, you’ll find
+that <span class="math inline">\(\tan \theta\)</span> is given by taking the opposite side and dividing by
+the adjacent side (soh cah toa). In the shown in the figure above, we get:
+<span class="math display">\[\tan \theta = \frac{b}{a}\]</span> and therefore
+<span class="math display">\[\theta = \tan^{- 1} (\frac{b}{a}) .\]</span> However, it is not so simple if
+the complex number falls into one of the other quadrants of the complex
+plane (but it still uses simple trig).</p>
+<p>The following figure shows the quadrants:</p>
+<div class="center">
+<div class="figure">
+<img src="Polar_quads.png" style="width:100.0%" alt="" />
+<p class="caption">Complex numbers in each of the four quadrants with their respective
+arguments.</p>
+</div>
+</div>
+<p>By convention the principle argument for a complex number takes the
+values <span class="math inline">\(- \pi\)</span> to <span class="math inline">\(\pi\)</span>, i.e. <span class="math inline">\(\theta \in (- \pi, \pi]\)</span>. This means the top half
+of the complex plane (Quadrant 1 and 2) have a positive argument
+<span class="math inline">\(\theta_{1, 2} \in [0, \pi]\)</span> and the bottom half of the complex plane (Quadrant 3 and 4)
+have a negative argument <span class="math inline">\(\theta_{3, 4} \in (- \pi, 0)\)</span>.</p>
+<table>
+<caption><span id="tab:quads">Table 4.1: </span> How to calculate the argument in each quadrant.</caption>
+<colgroup>
+<col width="14%" />
+<col width="28%" />
+<col width="32%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Quadrant</th>
+<th align="center">Sign of <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span></th>
+<th align="left">Formula for <span class="math inline">\(\theta\)</span></th>
+<th align="left">Range of <span class="math inline">\(\theta\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center"><span class="math inline">\(a &gt; 0\)</span>, <span class="math inline">\(b &gt; 0\)</span></td>
+<td align="left"><span class="math inline">\(\theta = \tan^{- 1} \left( \frac{b}{a}\right)\)</span></td>
+<td align="left"><span class="math inline">\(\theta \in (0, \frac{\pi}{2})\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="center"><span class="math inline">\(a &lt; 0\)</span>, <span class="math inline">\(b &gt; 0\)</span></td>
+<td align="left"><span class="math inline">\(\theta =\pi-\tan^{-1}\left(\left|\frac{b}{a}\right| \right)\)</span></td>
+<td align="left"><span class="math inline">\(\theta \in (\frac{\pi}{2}, \pi)\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="center"><span class="math inline">\(a &lt; 0\)</span>, <span class="math inline">\(b &lt; 0\)</span></td>
+<td align="left"><span class="math inline">\(\theta = - \left( \pi - \tan^{- 1} \left( \left|\frac{b}{a} \right| \right) \right)\)</span></td>
+<td align="left"><span class="math inline">\(\theta \in (- \pi, - \frac{\pi}{2})\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="center"><span class="math inline">\(a &gt; 0\)</span>, <span class="math inline">\(b &gt; 0\)</span></td>
+<td align="left"><span class="math inline">\(\theta = - \tan^{- 1} \left( \left| \frac{b}{a}\right| \right)\)</span></td>
+<td align="left"><span class="math inline">\(\theta \in (0, - \frac{\pi}{2})\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The only case not covered in the table are when the complex number lies
+directly on the axes. Then the argument takes the values <span class="math inline">\(\theta = 0\)</span>,
+<span class="math inline">\(\theta = \frac{\pi}{2}\)</span>, <span class="math inline">\(\theta = \pi\)</span>, <span class="math inline">\(\theta = \frac{\pi}{2}\)</span> for the
+positive real numbers, positive imaginary numbers, negative real numbers
+and negative imaginary numbers respectively.</p>
+<p>To convert a complex number from polar form to rectangular form we just
+need to multiply the polar form out (everything becomes pretty clear
+then).
+<span class="math display">\[z = |z|  (\cos \theta + i \sin \theta) = r \cos \theta + ri \sin \theta = a
+   + bi\]</span> From this, it’s clear to see that <span class="math display">\[a = r \cos \theta\]</span> and
+<span class="math display">\[b = r \sin \theta .\]</span></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="operations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="de-moivre-euler-roots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Complex_notes.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ComplexNumbers .pdf", "ComplexNumbers .epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Problem Solutions | Complex Numbers</title>
+  <meta name="description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Problem Solutions | Complex Numbers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Problem Solutions | Complex Numbers" />
+  
+  <meta name="twitter:description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  
+
+<meta name="author" content="Dr Emma Coutts" />
+
+
+<meta name="date" content="2022-08-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="practice-problems.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Complex Numbers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> How to use these notes</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#history-the-imaginary-unit"><i class="fa fa-check"></i><b>2.1</b> History, the imaginary unit</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#the-rectangular-form-argand-diagrams"><i class="fa fa-check"></i><b>2.2</b> The rectangular form, Argand diagrams</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="operations.html"><a href="operations.html"><i class="fa fa-check"></i><b>3</b> Operations</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="operations.html"><a href="operations.html#addition-and-subtraction"><i class="fa fa-check"></i><b>3.1</b> Addition and subtraction</a></li>
+<li class="chapter" data-level="3.2" data-path="operations.html"><a href="operations.html#multiplication"><i class="fa fa-check"></i><b>3.2</b> Multiplication</a></li>
+<li class="chapter" data-level="3.3" data-path="operations.html"><a href="operations.html#complex-conjugate-modulus-and-division"><i class="fa fa-check"></i><b>3.3</b> Complex conjugate, modulus and division</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="polar-form.html"><a href="polar-form.html"><i class="fa fa-check"></i><b>4</b> Polar form</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="polar-form.html"><a href="polar-form.html#converting-between-forms"><i class="fa fa-check"></i><b>4.1</b> Converting between forms</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="polar-form.html"><a href="polar-form.html#finding-theta"><i class="fa fa-check"></i><b>4.1.1</b> Finding <span class="math inline">\(\theta\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html"><i class="fa fa-check"></i><b>5</b> De Moivre, Euler, roots</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#de-moivres-formula"><i class="fa fa-check"></i><b>5.1</b> De Moivre’s Formula</a></li>
+<li class="chapter" data-level="5.2" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#eulers-formula"><i class="fa fa-check"></i><b>5.2</b> Euler’s Formula</a></li>
+<li class="chapter" data-level="5.3" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.3</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="5.4" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#finding-the-roots"><i class="fa fa-check"></i><b>5.4</b> Finding the roots</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="practice-problems.html"><a href="practice-problems.html"><i class="fa fa-check"></i><b>6</b> Practice Problems</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="practice-problems.html"><a href="practice-problems.html#solving-quadratic-equations"><i class="fa fa-check"></i><b>6.1</b> Solving quadratic equations</a></li>
+<li class="chapter" data-level="6.2" data-path="practice-problems.html"><a href="practice-problems.html#argand-diagrams"><i class="fa fa-check"></i><b>6.2</b> Argand diagrams</a></li>
+<li class="chapter" data-level="6.3" data-path="practice-problems.html"><a href="practice-problems.html#addition"><i class="fa fa-check"></i><b>6.3</b> Addition</a></li>
+<li class="chapter" data-level="6.4" data-path="practice-problems.html"><a href="practice-problems.html#multiplication-1"><i class="fa fa-check"></i><b>6.4</b> Multiplication</a></li>
+<li class="chapter" data-level="6.5" data-path="practice-problems.html"><a href="practice-problems.html#complex-conjugate-and-division"><i class="fa fa-check"></i><b>6.5</b> Complex conjugate and division</a></li>
+<li class="chapter" data-level="6.6" data-path="practice-problems.html"><a href="practice-problems.html#polar-co-ordinates"><i class="fa fa-check"></i><b>6.6</b> Polar co-ordinates</a></li>
+<li class="chapter" data-level="6.7" data-path="practice-problems.html"><a href="practice-problems.html#de-moivres-theorem"><i class="fa fa-check"></i><b>6.7</b> de Moivre’s theorem</a></li>
+<li class="chapter" data-level="6.8" data-path="practice-problems.html"><a href="practice-problems.html#applications-to-trigonometric-identities"><i class="fa fa-check"></i><b>6.8</b> Applications to trigonometric identities</a></li>
+<li class="chapter" data-level="6.9" data-path="practice-problems.html"><a href="practice-problems.html#roots"><i class="fa fa-check"></i><b>6.9</b> Roots</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="problem-solutions.html"><a href="problem-solutions.html"><i class="fa fa-check"></i><b>7</b> Problem Solutions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="problem-solutions.html"><a href="problem-solutions.html#solving-quadratic-equations-1"><i class="fa fa-check"></i><b>7.1</b> Solving quadratic equations</a></li>
+<li class="chapter" data-level="7.2" data-path="problem-solutions.html"><a href="problem-solutions.html#argand-diagrams-1"><i class="fa fa-check"></i><b>7.2</b> Argand diagrams</a></li>
+<li class="chapter" data-level="7.3" data-path="problem-solutions.html"><a href="problem-solutions.html#addition-1"><i class="fa fa-check"></i><b>7.3</b> Addition</a></li>
+<li class="chapter" data-level="7.4" data-path="problem-solutions.html"><a href="problem-solutions.html#multiplication-2"><i class="fa fa-check"></i><b>7.4</b> Multiplication</a></li>
+<li class="chapter" data-level="7.5" data-path="problem-solutions.html"><a href="problem-solutions.html#complex-conjugate-and-division-1"><i class="fa fa-check"></i><b>7.5</b> Complex conjugate and division</a></li>
+<li class="chapter" data-level="7.6" data-path="problem-solutions.html"><a href="problem-solutions.html#polar-co-ordinates-1"><i class="fa fa-check"></i><b>7.6</b> Polar co-ordinates</a></li>
+<li class="chapter" data-level="7.7" data-path="problem-solutions.html"><a href="problem-solutions.html#de-moivres-theorem-1"><i class="fa fa-check"></i><b>7.7</b> de Moivre’s theorem</a></li>
+<li class="chapter" data-level="7.8" data-path="problem-solutions.html"><a href="problem-solutions.html#applications-to-trigonometric-identities-1"><i class="fa fa-check"></i><b>7.8</b> Applications to trigonometric identities</a></li>
+<li class="chapter" data-level="7.9" data-path="problem-solutions.html"><a href="problem-solutions.html#roots-1"><i class="fa fa-check"></i><b>7.9</b> Roots</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Complex Numbers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="problem-solutions" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Problem Solutions<a href="problem-solutions.html#problem-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="solving-quadratic-equations-1" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Solving quadratic equations<a href="problem-solutions.html#solving-quadratic-equations-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(z = 2 \pm \sqrt{3}i\)</span></p></li>
+<li><p><span class="math inline">\(z = \pm 2\sqrt{2}i\)</span></p></li>
+<li><p><span class="math inline">\(z = -12 \pm 3\sqrt{13}\)</span></p></li>
+<li><p><span class="math inline">\(z = \frac{1}{6} \pm \frac{\sqrt{59}}{6}i\)</span></p></li>
+</ol>
+</div>
+<div id="argand-diagrams-1" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Argand diagrams<a href="problem-solutions.html#argand-diagrams-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="addition-1" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Addition<a href="problem-solutions.html#addition-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(-1 + i\)</span></p></li>
+<li><p><span class="math inline">\(-2(1 - i)\)</span></p></li>
+<li><p><span class="math inline">\(3(5 + 2i)\)</span></p></li>
+</ol>
+</div>
+<div id="multiplication-2" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Multiplication<a href="problem-solutions.html#multiplication-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(1 + 5i\)</span></p></li>
+<li><p><span class="math inline">\(23 + 2i\)</span></p></li>
+<li><p><span class="math inline">\(-7 - 57i\)</span></p></li>
+<li><p><span class="math inline">\(2(5 - 2i)\)</span></p></li>
+<li><p><span class="math inline">\(17 + 19i\)</span></p></li>
+</ol>
+</div>
+<div id="complex-conjugate-and-division-1" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Complex conjugate and division<a href="problem-solutions.html#complex-conjugate-and-division-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\overline{z} = -7i\)</span></p></li>
+<li><p><span class="math inline">\(\overline{z} = 2 + 3i\)</span></p></li>
+<li><p><span class="math inline">\(\overline{z} = -7 - 6i\)</span></p></li>
+</ol></li>
+<li><p>:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\frac{3 + 2i}{1 - 5i} = \frac{3 + 2i}{1 - 5i} \times \frac{1 + 5i}{1 + 5i} = -\frac{7}{26} + \frac{17}{26}i\)</span></p></li>
+<li><p><span class="math inline">\(\frac{2 + 3i}{8 - i} = \frac{2 + 3i}{8 - i}\times\frac{8 + i}{8 + i} = \frac{1}{5} +\frac{2}{5}i\)</span></p></li>
+<li><p><span class="math inline">\(\frac{(2 - i)(2 + 5i)}{1 + i} = \frac{9 - 8i}{1 + i}\times \frac{1 - i}{1 - i}= \frac{17}{2} - \frac{1}{2}i\)</span></p></li>
+<li><p><span class="math inline">\(\frac{1}{4 - 2i} + \frac{1}{3 + i} = \frac{2 + i}{10} + \frac{3 - i}{10} = \frac{1}{2}\)</span></p></li>
+<li><p><span class="math inline">\(\frac{1 - i}{2 + i} + \frac{4 - i}{1 - i} = \frac{(1-i)^2 + (4 - i)(2 + i)}{(2 + i)(1 - i)} = \frac{9}{3 - i} \times \frac{3 + i}{3 + i} = \frac{9}{10}(3 + i)\)</span></p></li>
+<li><p><span class="math inline">\(\frac{11i}{2 + 3i} = \frac{11i}{2 + 3i} \times \frac{2 - 3i}{2 - 3i} = \frac{33}{13} + \frac{22i}{13}\)</span></p></li>
+</ol></li>
+</ol>
+</div>
+<div id="polar-co-ordinates-1" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Polar co-ordinates<a href="problem-solutions.html#polar-co-ordinates-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>For <span class="math inline">\(z = a + bi\)</span> with <span class="math inline">\(a,b \in \mathds{R}\)</span> the modulus is
+<span class="math inline">\(\left|z\right| = \sqrt{a^2 + b^2}\)</span>. To find the principal value of
+the argument, <span class="math inline">\(\text{Arg}(z)\)</span>, use the Argand diagram for <span class="math inline">\(z\)</span>.
+Remember that it is not enough to simply compute
+<span class="math inline">\(\tan^{-1}\left(\frac{b}{a}\right)\)</span>, since this value will always
+lie in the interval <span class="math inline">\(\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\)</span>. If
+we see that <span class="math inline">\(z\)</span> lies in the first or fourth quadrant of the Argand
+diagram, then we can safely take <span class="math inline">\(\tan^{-1}\left(\frac{b}{a}\right)\)</span>
+as the principal value of the argument. However, if <span class="math inline">\(z\)</span> lies in the
+second quadrant then the principal value of the argument is
+<span class="math inline">\(\pi + \tan^{-1}\left(\frac{b}{a}\right)\)</span>. Furthermore, if <span class="math inline">\(z\)</span> lies
+in the third quadrant then the principal value of the argument is
+<span class="math inline">\(-\pi + \tan^{-1}\left(\frac{b}{a}\right)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Modulus: <span class="math inline">\(\left|z\right| = \sqrt{1^2 + 1^2} = 1\)</span>.<br />
+Since <span class="math inline">\(z\)</span> is in the first quadrant,
+<span class="math inline">\(\text{Arg}(z) = \tan^{-1}\left(\frac{1}{1}\right) =\frac{\pi}{4}\)</span></p></li>
+<li><p>Modulus: <span class="math inline">\(\left|z\right| = \sqrt{3 + 1} = 2\)</span>.<br />
+Since <span class="math inline">\(z\)</span> is in the fourth quadrant,
+<span class="math inline">\(\text{Arg}(z) = \tan^{-1}\left(-\frac{1}{\sqrt{3}}\right) = -\frac{\pi}{6}\)</span></p></li>
+<li><p>Modulus:
+<span class="math inline">\(\left|z\right| = \sqrt{4^2 + \left(4\sqrt{3}\right)^2} = 8\)</span>.<br />
+Since <span class="math inline">\(z\)</span> is in the third quadrant,
+<span class="math inline">\(\text{Arg}(z) = -\pi + \tan^{-1}\left(\frac{\sqrt{3}}{1}\right) = -\frac{2\pi}{3}\)</span>.</p></li>
+<li><p>Modulus: <span class="math inline">\(\left|z\right| = \sqrt{16 + 16} = 4\sqrt{2}\)</span>.<br />
+Since <span class="math inline">\(z\)</span> is in the second quadrant,
+<span class="math inline">\(\text{Arg}(z) = \pi + \tan^{-1}\left(-\frac{4}{4}\right) = \pi - \frac{\pi}{4} = \frac{3\pi}{4}\)</span>.</p></li>
+<li><p>Modulus:
+<span class="math inline">\(\left|z\right| = \sqrt{\cos^2(\frac{\pi}{3}) + \sin^2(\frac{\pi}{3})} = 1\)</span>.<br />
+Since <span class="math inline">\(z\)</span> is in the second quadrant
+<span class="math inline">\(\text{Arg}(z) = \pi + \tan^{-1}\left(-\frac{\sin(\frac{\pi}{3})}{\cos(\frac{\pi}{3})}\right) = \frac{2\pi}{3}\)</span>.</p></li>
+</ol></li>
+<li><p>Use the strategy above to find <span class="math inline">\(\left|z\right|\)</span> and
+<span class="math inline">\(-\pi &lt;\text{Arg}(z)\leq \pi\)</span>.<br />
+The polar form is then
+<span class="math inline">\(z = \left|z\right|\text{cis}\left(\text{Arg}(z)\right)\)</span>,<br />
+where
+<span class="math inline">\(\text{cis}\left(\text{Arg}(z)\right) = \cos\left(\text{Arg}(z)\right) + i\sin\left(\text{Arg}(z)\right)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(z = 4\text{cis}\left(-\frac{\pi}{3}\right)\)</span></p></li>
+<li><p><span class="math inline">\(z = 9\text{cis}\left(\pi\right)\)</span></p></li>
+<li><p><span class="math inline">\(z = 7\sqrt{2}\text{cis}\left(\frac{\pi}{4}\right)\)</span></p></li>
+<li><p><span class="math inline">\(z =94\sqrt{2}\text{cis}\left(\frac{3\pi}{4}\right)\)</span></p></li>
+<li><p><span class="math inline">\(z =6\text{cis}\left(-\frac{2\pi}{3}\right)\)</span></p></li>
+</ol></li>
+<li><p>From the polar form <span class="math inline">\(z = r\text{cis}\left(\theta\right)\)</span> the
+rectangular form is
+<span class="math inline">\(z = r\cos\left(\theta\right) + r\sin\left(\theta\right)i\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(z = \sqrt{3} + i\)</span></p></li>
+<li><p><span class="math inline">\(z = \frac{5\sqrt{3}}{2} - \frac{5}{2}i\)</span></p></li>
+<li><p><span class="math inline">\(z = -3 - 3i\)</span></p></li>
+<li><p><span class="math inline">\(z = - 2\sqrt{3} + 6i\)</span></p></li>
+</ol></li>
+</ol>
+</div>
+<div id="de-moivres-theorem-1" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> de Moivre’s theorem<a href="problem-solutions.html#de-moivres-theorem-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For complex numbers <span class="math inline">\(z_1 = r_1\text{cis}(\theta_1)\)</span> and
+<span class="math inline">\(z_2 = r_2\text{cis}{\theta_2}\)</span> the rules of multiplication and division
+in polar form state are:</p>
+<ul>
+<li><p><span class="math inline">\(z_1z_2 = r_1r_2\text{cis}(\theta_1 + \theta_2)\)</span></p></li>
+<li><p><span class="math inline">\(\frac{z_1}{z_2} = \frac{r_1}{r_2}\text{cis}\left(\theta_1 - \theta_2\right)\)</span></p></li>
+</ul>
+<p>For the complex number <span class="math inline">\(z = r\text{cis}(\theta)\)</span>, and integer
+<span class="math inline">\(n\in\mathds{Z}\)</span>, de Moivre’s theorem states that
+<span class="math inline">\(z^{n} = r^{n}\text{cis}(n\theta)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>The respective polar forms are
+<span class="math inline">\(z_1 = 2\sqrt{2}\text{cis}\left(\frac{3\pi}{4}\right)\)</span> and
+<span class="math inline">\(z_2 = 2\text{cis}\left(-\frac{\pi}{6}\right)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(z_1z_2 = 4\sqrt{2}\text{cis}(\frac{3\pi}{4} - \frac{\pi}{6}) = 4\sqrt{2}\text{cis}\left(\frac{7\pi}{12}\right)\)</span>.</p></li>
+<li><p><span class="math inline">\(z_1^3 = (2\sqrt{2})^3\text{cis}\left(3\times\frac{3\pi}{4}\right) = 16\sqrt{2}\text{cis}\left(\frac{9\pi}{4} - 2\pi\right) = 16\sqrt{2}\text{cis}\left(\frac{\pi}{4}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\frac{1}{z_1^3} = z_1^{-3} = (2\sqrt{2})^{-3}\text{cis}\left(-\frac{\pi}{4}\right) = \frac{1}{16\sqrt{2}}\text{cis}\left(-\frac{\pi}{4}\right)\)</span></p></li>
+<li><p><span class="math inline">\(z_1^3z_2^5 = (2\sqrt{2})^32^5\text{cis}\left(\frac{9\pi}{4} - \frac{5\pi}{6}\right) = 2^9\sqrt{2}\text{cis}\left(\frac{17\pi}{12}\right) = 2^9\sqrt{2}\text{cis}\left(\frac{-7\pi}{12}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\frac{z_1^8}{z_2^6} = \frac{(2\sqrt{2})^8\text{cis}\left(6\pi\right)}{2^6\text{cis}\left(\pi\right)} = 2^6\text{cis}\left(\pi\right) = -2^6\)</span></p></li>
+</ol></li>
+<li><p>Apply the rules stated at the start to this section, along with de
+Moivre’s theorem.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(z = \frac{(\sqrt{8})^5\text{cis}\left(\frac{5\pi}{4}\right)}{\sqrt{2}\text{cis}\left(-\frac{\pi}{4}\right)} = 2^7\text{cis}\left(\frac{3\pi}{2}\right) = -128i\)</span></p></li>
+<li><p><span class="math inline">\(z = \frac{\left(2\text{cis}\left(\frac{\pi}{3}\right)\right)^2}{\left(2\sqrt{2}\text{cis}\left(\frac{\pi}{4}\right)\right)^3} = \frac{1}{4\sqrt{2}}\text{cis}\left(\frac{2\pi}{3} - \frac{3\pi}{4}\right) = \frac{1}{16}\text{cis}\left(- \frac{\pi}{12}\right)\)</span></p></li>
+<li><p><span class="math inline">\(z = \sqrt{2}^{10}\text{cis}\left(\frac{10\pi}{4}\right) + \sqrt{2}^{10}\text{cis}\left(-\frac{10\pi}{4}\right) = 2(\sqrt{2})^{10}\left(\text{cis}(\frac{\pi}{2})+\text{cis}(\frac{-\pi}{2})\right) = 2(\sqrt{2})^{10}(i-i) = 0\)</span></p></li>
+<li><p><span class="math inline">\(z = \left(2\text{cis}(\frac{5\pi}{6})\right)^{-5} = \frac{1}{32}\text{cis}\left(-\frac{25\pi}{6}\right) = \frac{1}{32}\text{cis}\left(-\frac{\pi}{6}\right)\)</span></p></li>
+<li><p><span class="math inline">\(z = \frac{\left(\cos\left(\theta\right) + i\sin\left(\theta\right)\right)^4}{\left(\sin\left(\theta\right) + i\cos\left(\theta\right)\right)^2} = \frac{\text{cis}\left(4\theta\right)}{\left[i\left(\cos\theta - i\sin\theta\right)\right]^2} = -\frac{\text{cis}\left(4\theta\right)}{\left(\cos(-\theta) + i\sin(-\theta)\right)^2} = -\frac{\text{cis}\left(4\theta\right)}{\text{cis}\left(-2\theta\right)} = -\text{cis}\left(6\theta\right)\)</span></p></li>
+</ol></li>
+</ol>
+</div>
+<div id="applications-to-trigonometric-identities-1" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> Applications to trigonometric identities<a href="problem-solutions.html#applications-to-trigonometric-identities-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Using de Moivre’s theorem we have that <span class="math display">\[\begin{aligned}
+            \cos\left(3\theta\right) + i\sin\left(3\theta\right) &amp;= \left(\cos(\theta) + i\sin(\theta)\right)^3\\
+            &amp; =\cos^3\left(\theta\right) + 3\cos^2\theta i\sin\theta + 3\cos\theta(i\sin\theta)^2 + (i\sin\theta)^3\\
+            &amp; = \cos(\theta)\left(\cos[2](\theta)-3\sin[2](\theta)\right) + i\sin(\theta)\left(3\cos[2](\theta)-\sin[2](\theta)\right)
+        \end{aligned}\]</span> Now by Equating real and imaginary parts we
+get <span class="math display">\[\begin{aligned}
+        \cos(3\theta) = \cos(\theta)\left(\cos[2](\theta)-3\sin[2](\theta)\right),\\
+        \sin\left(3\theta\right) = \sin(\theta)\left(3\cos[2](\theta)-\sin[2](\theta)\right).
+        \end{aligned}\]</span></p></li>
+<li><p>Using de Moivre’s theorem we have that. <span class="math display">\[\begin{aligned}
+            \cos(2\theta) + i\sin(2\theta)&amp;= \left(\cos(\theta) + i\sin(\theta)\right)^2\\
+            &amp; = \cos[2](\theta) - \sin[2](\theta) + 2i\sin(\theta)\cos(\theta)\\
+            &amp; = 2\cos[2](\theta) - 1 + 2i\sin(\theta)\cos(\theta).
+        \end{aligned}\]</span> Now by equating real and imaginary parts we
+get <span class="math display">\[\begin{aligned}
+            \cos[2](\theta) &amp;= \frac{1}{2}\left(\cos(2\theta) + 1\right),\\
+            \sin(2\theta) &amp;= 2\sin(\theta)\cos(\theta).
+        \end{aligned}\]</span></p></li>
+<li><p>Let <span class="math inline">\(z = \text{cis}\left(\theta\right)\)</span> and so
+<span class="math inline">\(\frac{1}{z} = (\text{cis}(\theta))^{-1} = \cos\theta - i\sin\theta\)</span>.
+It follows that
+<span class="math inline">\(\sin\left(\theta\right) = -\frac{i}{2}\left(z - \frac{1}{z}\right)\)</span>.
+Therefore, <span class="math display">\[\begin{aligned}
+            \sin[5](\theta) &amp;= \left(-\frac{i}{2}\right)^5\left(z - \frac{1}{z}\right)^5\\
+            &amp;= -\frac{i}{32}\left[z^5\left(-\frac{1}{z}\right)^0 + 5z^4\left(-\frac{1}{z}\right) + 10z^3\left(-\frac{1}{z}\right)^2 + 10z^2\left(-\frac{1}{z}\right)^3 + 5z\left(-\frac{1}{z}\right)^4 + z^0\left(-\frac{1}{z}\right)^5\right]\\
+            &amp;=-\frac{i}{32}\left[z^5 - 5z^3 + 10z - \frac{10}{z} + \frac{5}{z^3} - \frac{1}{z^5}\right]\\
+            &amp;=-\frac{i}{32}\left[\left(z^5 - \frac{1}{z^5}\right) - 5\left(z^3 - \frac{1}{z^3}\right) + 10\left(z - \frac{1}{z}\right)\right]\\
+            &amp; = \frac{1}{16}\left[\sin(5\theta) - 5\sin(3\theta) + 10\sin(\theta)\right].
+        \end{aligned}\]</span> This means that <span class="math display">\[\begin{aligned}
+        \int\sin^5\left(\theta\right)\text{d}\theta &amp; = \frac{1}{16}\int\left(\sin(5\theta) - 5\sin\left(3\theta\right) + 10\sin\left(\theta\right)\right)\text{d}\theta\\
+        &amp; = -\frac{1}{80}\cos\left(5\theta\right) + \frac{5}{48}\cos(3\theta) - \frac{5}{8}\cos(\theta)
+        \end{aligned}\]</span> Alternatively this can be solved by using
+<span class="math inline">\(z^5 = (\text{cis}(\theta))^5\)</span> with the binomial expansion followed
+by equating real and imaginary parts, as in Q1 of this subsection.</p></li>
+<li><p>Let <span class="math inline">\(z = \text{cis}\left(\theta\right)\)</span>. It follows that
+<span class="math display">\[\begin{aligned}
+            \cos[2](\theta)\sin[4](\theta) &amp;= \cos[2](\theta)\left(i\sin(\theta)\right)^4\\
+            &amp;=\left(\frac{1}{2}\left(z + \frac{1}{z}\right)\right)^2\left(\frac{1}{2}\left(z - \frac{1}{z}\right)\right)^4\\
+            &amp;=\frac{1}{64}\left[\left(z^6 + \frac{1}{z^6}\right) - 2\left(z^4 + \frac{1}{z^4}\right) - \left(z^2 + \frac{1}{z^2}\right) + 4\right]\\
+            &amp; = \frac{1}{32}\left(\cos(6\theta) - 2\cos(4\theta) - \cos(2\theta) + 2\right)
+        \end{aligned}\]</span></p></li>
+<li><p>From the solution to the previous question we have that
+<span class="math display">\[\begin{aligned}
+                    \int_{0}^{\frac{\pi}{6}}\cos[2](\theta)\sin[4](\theta)\text{d}\theta &amp;= \frac{1}{32}\int_{0}^{\frac{\pi}{6}}\left(\cos(6\theta) - 2\cos(4\theta) - \cos(2\theta) + 2\right)\text{d}\theta.
+                \end{aligned}\]</span> It therefore follows that
+<span class="math display">\[\begin{aligned}
+                    \int_{0}^{\frac{\pi}{6}}\cos[2](\theta)\sin[4](\theta)\text{d}\theta &amp;= \frac{1}{32}\left[\frac{1}{6}\sin(6\theta) - \frac{1}{2}\sin(4\theta) - \frac{1}{2}\sin(2\theta)+ 2\theta\right]_0^{\frac{\pi}{6}}\\
+                    &amp; = \frac{1}{32}\left[-\frac{\sqrt{3}}{2} + \frac{\pi}{3}\right].
+                \end{aligned}\]</span></p></li>
+</ol>
+</div>
+<div id="roots-1" class="section level2 hasAnchor" number="7.9">
+<h2><span class="header-section-number">7.9</span> Roots<a href="problem-solutions.html#roots-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>In polar form <span class="math display">\[\begin{aligned}
+            4i = 4\text{cis}\left(\frac{\pi}{2} + 2k\pi\right),\quad k \in\mathds{Z}\implies w_k = \left(4i\right)^{\frac{1}{2}} = 2\text{cis}\left(\frac{\pi}{4} + k\pi\right), \quad k = 0, 1.
+        \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
+            w_0 &amp;= 2\text{cis}\left(\frac{\pi}{4}\right) = \sqrt{2} + \sqrt{2}i,\\
+            w_1 &amp; =
+            2\text{cis}\left(\frac{5\pi}{4}\right) = -\sqrt{2} - \sqrt{2}i.
+        \end{aligned}\]</span></p></li>
+<li><p>In polar form <span class="math display">\[\begin{aligned}
+            2 + 2\sqrt{3}i = 4\text{cis}\left(\frac{\pi}{3} + 2k\pi\right),\quad k \in\mathds{Z}\implies w_k = \left(2 + 2\sqrt{3}i\right)^{\frac{1}{2}} = 2\text{cis}\left(\frac{\pi}{6} + k\pi\right), \quad k = 0, 1.
+        \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
+            w_0 &amp;= 2\text{cis}\left(\frac{\pi}{6}\right) = \sqrt{3} + i,\\
+            w_1 &amp; =
+            2\text{cis}\left(\frac{7\pi}{6}\right) = -\sqrt{3} -i.
+        \end{aligned}\]</span></p></li>
+<li><p>In polar form <span class="math display">\[\begin{aligned}
+            -27 = 27\text{cis}\left(\pi + 2k\pi\right),\quad k \in\mathds{Z}\implies w_k = \left(-27\right)^{\frac{1}{3}} = 3\text{cis}\left(\frac{\pi}{3} + \frac{2k\pi}{3}\right), \quad k = 0, 1, 2.
+        \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
+            w_0 &amp;= 3\text{cis}\left(\frac{\pi}{3}\right) = \frac{3}{2} + \frac{3\sqrt{3}}{2}i,\\
+            w_1 &amp; = 3\text{cis}\left(\pi\right) = -3,\\
+            w_2 &amp; = 3\text{cis}\left(\frac{5\pi}{3}\right) = \frac{3}{2} - \frac{3\sqrt{3}}{2}i,
+        \end{aligned}\]</span></p></li>
+<li><p>In polar form <span class="math display">\[\begin{aligned}
+            8i = 8\text{cis}\left(\frac{\pi}{2} + 2k\pi\right),\quad k \in\mathds{Z}\implies w_k = \left(8i\right)^{\frac{1}{3}} = 2\text{cis}\left(\frac{\pi}{6} + \frac{2k\pi}{3}\right), \quad k = 0, 1, 2.
+        \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
+            w_0 &amp;= 2\text{cis}\left(\frac{\pi}{6}\right) = \sqrt{3} + i,\\
+            w_1 &amp; = 2\text{cis}\left(\frac{5\pi}{6}\right) = -\sqrt{3} + i,\\
+            w_2 &amp; = 2\text{cis}\left(\frac{3\pi}{2}\right) = - 2i,
+        \end{aligned}\]</span></p></li>
+<li><p>In polar form <span class="math display">\[\begin{aligned}
+            &amp;-8 - 8\sqrt{3}i = 16\text{cis}\left(\frac{4\pi}{3} + 2k\pi\right)\quad k \in\mathds{Z}\\
+            \implies&amp; w_k = \left(-8 - 8\sqrt{3}i\right)^{\frac{1}{4}} = 2\text{cis}\left(\frac{\pi}{3} + \frac{k\pi}{2}\right), \quad k = 0, 1, 2, 3.
+        \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
+            w_0 &amp;= 2\text{cis}\left(\frac{\pi}{3}\right) = 1 + \sqrt{3}i,\\
+            w_1 &amp; = 2\text{cis}\left(\frac{5\pi}{6}\right) = -\sqrt{3} + i,\\
+            w_2 &amp; = 2\text{cis}\left(\frac{4\pi}{3}\right) = - 1 - \sqrt{3}i,\\
+            w_3 &amp; = 2\text{cis}\left(\frac{11\pi}{6}\right) = \sqrt{3} - i.
+        \end{aligned}\]</span></p></li>
+<li><p>In polar form <span class="math display">\[\begin{aligned}
+            &amp; 729 = 729\text{cis}\left(2k\pi\right)\quad k \in\mathds{Z}
+            \implies w_k = 729^{\frac{1}{6}} = 3\text{cis}\left(\frac{k\pi}{3}\right), \quad k = 0, 1, 2, 3, 4, 5.
+        \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
+            w_0 &amp;= 3\\
+            w_1 &amp; = 3\text{cis}\left(\frac{\pi}{3}\right) = \frac{3}{2}\left(1 + \sqrt{3}i\right),\\
+            w_2 &amp; = 3\text{cis}\left(\frac{2\pi}{3}\right) = \frac{3}{2}\left(-1 + \sqrt{3}i\right),\\
+            w_3 &amp; = 3\text{cis}\left(\pi\right) = -3,\\
+            w_4 &amp; = 3\text{cis}\left(\frac{4\pi}{3}\right) = \frac{3}{2}\left(-1 - \sqrt{3}i\right),\\
+            w_5 &amp; = 3\text{cis}\left(\frac{5\pi}{3}\right) = \frac{3}{2}\left(1 - \sqrt{3}i\right).
+        \end{aligned}\]</span></p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="practice-problems.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-Complex_Sols.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ComplexNumbers .pdf", "ComplexNumbers .epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

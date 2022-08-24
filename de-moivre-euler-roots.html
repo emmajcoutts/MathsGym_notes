@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 De Moivre, Euler, roots | Complex Numbers</title>
+  <meta name="description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 De Moivre, Euler, roots | Complex Numbers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 De Moivre, Euler, roots | Complex Numbers" />
+  
+  <meta name="twitter:description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
+  
+
+<meta name="author" content="Dr Emma Coutts" />
+
+
+<meta name="date" content="2022-08-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="polar-form.html"/>
+<link rel="next" href="practice-problems.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Complex Numbers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> How to use these notes</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#history-the-imaginary-unit"><i class="fa fa-check"></i><b>2.1</b> History, the imaginary unit</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#the-rectangular-form-argand-diagrams"><i class="fa fa-check"></i><b>2.2</b> The rectangular form, Argand diagrams</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="operations.html"><a href="operations.html"><i class="fa fa-check"></i><b>3</b> Operations</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="operations.html"><a href="operations.html#addition-and-subtraction"><i class="fa fa-check"></i><b>3.1</b> Addition and subtraction</a></li>
+<li class="chapter" data-level="3.2" data-path="operations.html"><a href="operations.html#multiplication"><i class="fa fa-check"></i><b>3.2</b> Multiplication</a></li>
+<li class="chapter" data-level="3.3" data-path="operations.html"><a href="operations.html#complex-conjugate-modulus-and-division"><i class="fa fa-check"></i><b>3.3</b> Complex conjugate, modulus and division</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="polar-form.html"><a href="polar-form.html"><i class="fa fa-check"></i><b>4</b> Polar form</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="polar-form.html"><a href="polar-form.html#converting-between-forms"><i class="fa fa-check"></i><b>4.1</b> Converting between forms</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="polar-form.html"><a href="polar-form.html#finding-theta"><i class="fa fa-check"></i><b>4.1.1</b> Finding <span class="math inline">\(\theta\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html"><i class="fa fa-check"></i><b>5</b> De Moivre, Euler, roots</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#de-moivres-formula"><i class="fa fa-check"></i><b>5.1</b> De Moivre’s Formula</a></li>
+<li class="chapter" data-level="5.2" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#eulers-formula"><i class="fa fa-check"></i><b>5.2</b> Euler’s Formula</a></li>
+<li class="chapter" data-level="5.3" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.3</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="5.4" data-path="de-moivre-euler-roots.html"><a href="de-moivre-euler-roots.html#finding-the-roots"><i class="fa fa-check"></i><b>5.4</b> Finding the roots</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="practice-problems.html"><a href="practice-problems.html"><i class="fa fa-check"></i><b>6</b> Practice Problems</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="practice-problems.html"><a href="practice-problems.html#solving-quadratic-equations"><i class="fa fa-check"></i><b>6.1</b> Solving quadratic equations</a></li>
+<li class="chapter" data-level="6.2" data-path="practice-problems.html"><a href="practice-problems.html#argand-diagrams"><i class="fa fa-check"></i><b>6.2</b> Argand diagrams</a></li>
+<li class="chapter" data-level="6.3" data-path="practice-problems.html"><a href="practice-problems.html#addition"><i class="fa fa-check"></i><b>6.3</b> Addition</a></li>
+<li class="chapter" data-level="6.4" data-path="practice-problems.html"><a href="practice-problems.html#multiplication-1"><i class="fa fa-check"></i><b>6.4</b> Multiplication</a></li>
+<li class="chapter" data-level="6.5" data-path="practice-problems.html"><a href="practice-problems.html#complex-conjugate-and-division"><i class="fa fa-check"></i><b>6.5</b> Complex conjugate and division</a></li>
+<li class="chapter" data-level="6.6" data-path="practice-problems.html"><a href="practice-problems.html#polar-co-ordinates"><i class="fa fa-check"></i><b>6.6</b> Polar co-ordinates</a></li>
+<li class="chapter" data-level="6.7" data-path="practice-problems.html"><a href="practice-problems.html#de-moivres-theorem"><i class="fa fa-check"></i><b>6.7</b> de Moivre’s theorem</a></li>
+<li class="chapter" data-level="6.8" data-path="practice-problems.html"><a href="practice-problems.html#applications-to-trigonometric-identities"><i class="fa fa-check"></i><b>6.8</b> Applications to trigonometric identities</a></li>
+<li class="chapter" data-level="6.9" data-path="practice-problems.html"><a href="practice-problems.html#roots"><i class="fa fa-check"></i><b>6.9</b> Roots</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="problem-solutions.html"><a href="problem-solutions.html"><i class="fa fa-check"></i><b>7</b> Problem Solutions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="problem-solutions.html"><a href="problem-solutions.html#solving-quadratic-equations-1"><i class="fa fa-check"></i><b>7.1</b> Solving quadratic equations</a></li>
+<li class="chapter" data-level="7.2" data-path="problem-solutions.html"><a href="problem-solutions.html#argand-diagrams-1"><i class="fa fa-check"></i><b>7.2</b> Argand diagrams</a></li>
+<li class="chapter" data-level="7.3" data-path="problem-solutions.html"><a href="problem-solutions.html#addition-1"><i class="fa fa-check"></i><b>7.3</b> Addition</a></li>
+<li class="chapter" data-level="7.4" data-path="problem-solutions.html"><a href="problem-solutions.html#multiplication-2"><i class="fa fa-check"></i><b>7.4</b> Multiplication</a></li>
+<li class="chapter" data-level="7.5" data-path="problem-solutions.html"><a href="problem-solutions.html#complex-conjugate-and-division-1"><i class="fa fa-check"></i><b>7.5</b> Complex conjugate and division</a></li>
+<li class="chapter" data-level="7.6" data-path="problem-solutions.html"><a href="problem-solutions.html#polar-co-ordinates-1"><i class="fa fa-check"></i><b>7.6</b> Polar co-ordinates</a></li>
+<li class="chapter" data-level="7.7" data-path="problem-solutions.html"><a href="problem-solutions.html#de-moivres-theorem-1"><i class="fa fa-check"></i><b>7.7</b> de Moivre’s theorem</a></li>
+<li class="chapter" data-level="7.8" data-path="problem-solutions.html"><a href="problem-solutions.html#applications-to-trigonometric-identities-1"><i class="fa fa-check"></i><b>7.8</b> Applications to trigonometric identities</a></li>
+<li class="chapter" data-level="7.9" data-path="problem-solutions.html"><a href="problem-solutions.html#roots-1"><i class="fa fa-check"></i><b>7.9</b> Roots</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Complex Numbers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="de-moivre-euler-roots" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> De Moivre, Euler, roots<a href="de-moivre-euler-roots.html#de-moivre-euler-roots" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="de-moivres-formula" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> De Moivre’s Formula<a href="de-moivre-euler-roots.html#de-moivres-formula" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>De Moivre’s Formula is an important result, since it connects complex
+numbers with trigonometric functions. It has a close connection to
+Euler’s formula, can be used to find roots of complex numbers and to
+derive certain trigonometric identities. It states that for a real
+number <span class="math inline">\(\theta\)</span> and integer <span class="math inline">\(n\)</span>, it holds that</p>
+<div class="textbox" data.latex="">
+<p>De Moivre’s Theorem:
+<span class="math display">\[(\cos \theta + i\sin \theta)^n = \cos (n \theta) + i \sin (n\theta)\]</span></p>
+</div>
+<p>This can be proven using induction.<br />
+We can use De Moivre’s formula to find certain trigonometric identities,
+such as the formulae for <span class="math inline">\(\cos (nx)\)</span> and <span class="math inline">\(\sin (nx)\)</span>. For example, if
+<span class="math inline">\(n = 2\)</span>, we have<br />
+<br />
+<span class="math inline">\((\cos x + i \sin x)^2 = \cos (2 x) + i \sin (2 x)\)</span><br />
+<br />
+We can expand the right hand side using the binomial theorem to get:<br />
+<br />
+<span class="math inline">\(\cos^2 x + 2 i \sin x \cos x - \sin^2 x = \cos (2 x) + i \sin (2 x)\)</span><br />
+<br />
+We gather the real and imaginary components together to get:<br />
+<br />
+<span class="math inline">\((\cos^2 x - \sin^2 x) + i (2 \sin x \cos x) = \cos (2 x) + i \sin (2 x)\)</span><br />
+<span class="math inline">\(\cos (2 x) = \cos^2 x - \sin^2 x\)</span> and <span class="math inline">\(\sin (2 x) = 2 \sin x \cos x\)</span><br />
+which you might remember are the exact formulae for <span class="math inline">\(\cos (2 x)\)</span> and
+<span class="math inline">\(\sin (2 x)\)</span>.</p>
+</div>
+<div id="eulers-formula" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Euler’s Formula<a href="de-moivre-euler-roots.html#eulers-formula" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Closely related to De Moivre’s formula is Euler’s formula. It connects
+trigonometry, complex numbers, and exponents as well. It states that for
+any real number <span class="math inline">\(\theta\)</span> it holds that<br />
+<br />
+<span class="math inline">\(e^{i \theta} = \cos \theta + i \sin \theta\)</span><br />
+<br />
+For the value <span class="math inline">\(\theta = \pi\)</span>, it yields so called Euler’s identity:<br />
+<br />
+<span class="math inline">\(e^{i \pi} + 1 = 0\)</span><br />
+<br />
+Given the connection between Euler’s and De Moivre’s formula, we can
+represent complex numbers as an exponent. For a complex number with
+polar form <span class="math inline">\(r (\cos \theta + i \sin \theta)\)</span>, it’s exponent form is <span class="math inline">\(re^{i \theta}\)</span>.</p>
+<p>We now have three ways to write a complex number:</p>
+<div class="textbox" data_latex="">
+<p><span class="math inline">\(z = a + bi\)</span>
+<span class="math inline">\(z= r (\cos \theta + i\sin \theta)\)</span>
+<span class="math inline">\(z = re^{i\theta}\)</span></p>
+</div>
+</div>
+<div id="roots-of-complex-numbers" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Roots of complex numbers<a href="de-moivre-euler-roots.html#roots-of-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Like with real numbers, you can always find <span class="math inline">\(n\)</span>-th roots of complex
+numbers. In other words, for a complex number <span class="math inline">\(z\)</span> you can find complex
+numbers <span class="math inline">\(x\)</span> such that <span class="math inline">\(x^n = z\)</span>. We can rewrite this as <span class="math inline">\(x^n - z = 0\)</span>
+and thus get a polynomial in <span class="math inline">\(x\)</span>. Using the fundamental theorem of
+algebra we can prove it has exactly <span class="math inline">\(n\)</span> distinct solutions for the value
+of <span class="math inline">\(x\)</span>. The <span class="math inline">\(n\)</span>-th roots of a complex number are found at equally spaced
+angles around the complex plane and have the same modulus - they create
+an n-gon shape!</p>
+<div class="figure">
+<img src="Roots.png" style="width:100.0%" alt="" />
+<p class="caption">The five roots of unity shown on the
+unit circle.</p>
+</div>
+<p>Notice the axis of symmetry through the real axis. This is a consequence
+of the fact that if a complex number <span class="math inline">\(z\)</span> is a root of a polynomial, then
+so is <span class="math inline">\(\bar{z}\)</span>.</p>
+</div>
+<div id="finding-the-roots" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Finding the roots<a href="de-moivre-euler-roots.html#finding-the-roots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>How do we go about finding the roots of a complex number? This is most
+easily done in exponential (or polar) form, i.e. write the complex
+number as <span class="math inline">\(z = re^{i \theta}\)</span>.</p>
+<p>Notice that any point on the plane remains the same if we add a full
+revolution of <span class="math inline">\(2 \pi\)</span>, or two full revolutions <span class="math inline">\(4 \pi\)</span> (or infact any
+number of revolutions) so let’s write:
+<span class="math display">\[z = re^{i (\theta + 2 k \pi)},\]</span> where <span class="math inline">\(k \in \mathbb{Z}\)</span> (any
+integer).</p>
+<p>Now if we want to find the n-th root we can simply use rules of indices:
+<span class="math display">\[\begin{aligned}
+  \sqrt[n]{z} = z^{\frac{1}{n}} &amp; =  (re^{i (\theta + 2 k
+  \pi)})^{\frac{1}{n}}\\
+  &amp; =  r^{\frac{1}{n}} \exp \left( \frac{i (\theta + 2 k \pi)}{n} \right)\end{aligned}\]</span>
+Now to find each root take <span class="math inline">\(k = 0\)</span>, <span class="math inline">\(k = 1\)</span>,..., <span class="math inline">\(k = n - 1\)</span>!</p>
+<p>Here is an example to illustrate this in action. Find the 4th roots of
+<span class="math inline">\(z = 1 - i\)</span>. We first rewrite this in exponential form:
+<span class="math display">\[\begin{aligned}
+  r &amp; =  |z| = \sqrt{1^2 + (- 1)^2} = \sqrt{2}\\
+  \theta &amp; =  - \tan^{- 1} \left( \left| \frac{- 1}{1} \right| \right) = -
+  \frac{\pi}{4} \quad \text{since we are in quadrant 4}\\
+  &amp; \Rightarrow  z = \sqrt{2} e^{i (- \frac{\pi}{4} + 2 k \pi)}\end{aligned}\]</span></p>
+<p>We can then easily find the 4th roots:</p>
+<p><span class="math display">\[\begin{aligned}
+  z^{\frac{1}{4}} &amp; =  \left( \sqrt{2} e^{i (- \frac{\pi}{4} + 2 k \pi)}
+  \right)^{\frac{1}{4}}\\
+  &amp; =  2^{\frac{1}{8}} \exp \left( i \left( - \frac{\pi}{16} + \frac{k
+  \pi}{2} \right) \right)\end{aligned}\]</span> The first root, call it
+<span class="math inline">\(\omega_0\)</span>, is found when <span class="math inline">\(k = 0\)</span>:
+<span class="math display">\[\omega_0 = 2^{\frac{1}{8}} \exp \left( i \left( - \frac{\pi}{16} + \frac{0
+   \pi}{2} \right) \right) = 2^{\frac{1}{8}} e^{\frac{- i \pi}{16}}\]</span>
+Second root, when <span class="math inline">\(k = 1\)</span>:
+<span class="math display">\[\omega_1 = 2^{\frac{1}{8}} \exp \left( i \left( - \frac{\pi}{16} +
+   \frac{\pi}{2} \right) \right) = 2^{\frac{1}{8}} e^{\frac{i 7 \pi}{16}}\]</span>
+Third root, when <span class="math inline">\(k = 2\)</span>:
+<span class="math display">\[\omega_2 = 2^{\frac{1}{8}} \exp \left( i \left( - \frac{\pi}{16} + \frac{2
+   \pi}{2} \right) \right) = 2^{\frac{1}{8}} e^{\frac{i 15 \pi}{16}}\]</span>
+Fourth root, when <span class="math inline">\(k = 3\)</span>:
+<span class="math display">\[\omega_3 = 2^{\frac{1}{8}} \exp \left( i \left( - \frac{\pi}{16} + \frac{3
+   \pi}{2} \right) \right) = 2^{\frac{1}{8}} e^{\frac{i 23 \pi}{16}} =
+   2^{\frac{1}{8}} e^{\frac{- i 9 \pi}{16}}\]</span> where the final step
+converts the angle into the principle argument by adjusting it to lie in
+the range <span class="math inline">\((- \pi, \pi]\)</span>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="polar-form.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="practice-problems.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Complex_notes.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ComplexNumbers .pdf", "ComplexNumbers .epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
