@@ -316,18 +316,21 @@ get <span class="math display">\[\begin{aligned}
 It follows that
 <span class="math inline">\(\sin\left(\theta\right) = -\frac{i}{2}\left(z - \frac{1}{z}\right)\)</span>.
 Therefore, starting with the binomial expansion: <span class="math display">\[\begin{aligned}
-            \sin^5(\theta) &amp;= \left(-\frac{i}{2}\right)^5\left(z - \frac{1}{z}\right)^5\\
-            &amp;= -\frac{i}{32}\left[z^5\left(-\frac{1}{z}\right)^0 + 5z^4\left(-\frac{1}{z}\right) + 10z^3\left(-\frac{1}{z}\right)^2 + 10z^2\left(-\frac{1}{z}\right)^3 + 5z\left(-\frac{1}{z}\right)^4\\
-            &amp;+z^0\left(-\frac{1}{z}\right)^5\right]\\
+\sin^5(\theta) &amp;= \left(-\frac{i}{2}\right)^5\left(z -\frac{1}{z}\right)^5
+            &amp;= -\frac{i}{32}\left[z^5\left(-\frac{1}{z}\right)^0 + 5z^4\left(-\frac{1}{z}\right) + 10z^3\left(-\frac{1}{z}\right)^2 + 10z^2\left(-\frac{1}{z}\right)^3 + 5z\left(-\frac{1}{z}\right)^4\right.
+            &amp;+ \left. z^0\left(-\frac{1}{z}\right)^5\right]\\
 &amp;=-\frac{i}{32}\left[z^5 - 5z^3 + 10z - \frac{10}{z} + \frac{5}{z^3} - \frac{1}{z^5}\right]\\
             &amp;=-\frac{i}{32}\left[\left(z^5 - \frac{1}{z^5}\right) - 5\left(z^3 - \frac{1}{z^3}\right) + 10\left(z - \frac{1}{z}\right)\right]\\
-            &amp; = \frac{1}{16}\left[\sin(5\theta) - 5\sin(3\theta) + 10\sin(\theta)\right].
-        \end{aligned}\]</span> This means that <span class="math display">\[\begin{aligned}
-        \int\sin^5\left(\theta\right)\text{d}\theta &amp; = \frac{1}{16}\int\left(\sin(5\theta) - 5\sin\left(3\theta\right) + 10\sin\left(\theta\right)\right)\text{d}\theta\\
-        &amp; = -\frac{1}{80}\cos\left(5\theta\right) + \frac{5}{48}\cos(3\theta) - \frac{5}{8}\cos(\theta)
-        \end{aligned}\]</span> Alternatively this can be solved by using
+            &amp;= \frac{1}{16}\left[\sin(5\theta) - 5\sin(3\theta) + 10\sin(\theta)\right].
+        \end{aligned}\]</span></p></li>
+</ol>
+<p>This means that <span class="math display">\[\begin{aligned}
+            \int\sin^5\left(\theta\right)\text{d}\theta &amp; = \frac{1}{16}\int\left(\sin(5\theta) - 5\sin\left(3\theta\right) + 10\sin\left(\theta\right)\right)\text{d}\theta\\
+            &amp; = -\frac{1}{80}\cos\left(5\theta\right) + \frac{5}{48}\cos(3\theta) - \frac{5}{8}\cos(\theta)
+            \end{aligned}\]</span> Alternatively this can be solved by using
 <span class="math inline">\(z^5 = (\text{cis}(\theta))^5\)</span> with the binomial expansion followed
-by equating real and imaginary parts, as in Q1 of this subsection.</p></li>
+by equating real and imaginary parts, as in Q1 of this subsection.</p>
+<ol start="4" style="list-style-type: decimal">
 <li><p>Let <span class="math inline">\(z = \text{cis}\left(\theta\right)\)</span>. It follows that
 <span class="math display">\[\begin{aligned}
             \cos^2(\theta)\sin^4(\theta) &amp;= \cos^2(\theta)\left(i\sin(\theta)\right)^4\\
