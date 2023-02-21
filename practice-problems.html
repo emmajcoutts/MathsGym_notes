@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Practice Problems | Complex Numbers</title>
   <meta name="description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Practice Problems | Complex Numbers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Emma Coutts" />
 
 
-<meta name="date" content="2022-08-24" />
+<meta name="date" content="2023-02-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -232,7 +232,7 @@ form <span class="math inline">\(a + ib\)</span> where <span class="math inline"
 <li><p><span class="math inline">\(z = -3 -3\sqrt{3}i\)</span></p></li>
 </ol></li>
 <li><p>Write the following complex numbers in rectangular form i.e.
-<span class="math inline">\(z = a + bi\)</span> where <span class="math inline">\(a, b\in\mathds{R}\)</span>.</p>
+<span class="math inline">\(z = a + bi\)</span> where <span class="math inline">\(a, b\in\mathbb{R}\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(z = 2\text{cis}\left(\frac{\pi}{6}\right)\)</span></p></li>
 <li><p><span class="math inline">\(z = 5\text{cis}\left(-\frac{\pi}{3}\right)\)</span></p></li>
@@ -275,22 +275,22 @@ following.</p>
 <li><p>Use de Moivre’s theorem to express <span class="math inline">\(\sin(3\theta)\)</span> and
 <span class="math inline">\(\cos(3\theta)\)</span> in terms of <span class="math inline">\(\sin(\theta)\)</span> and <span class="math inline">\(\cos(\theta)\)</span>.</p></li>
 <li><p>Use de Moivre’s theorem to show that <span class="math display">\[\begin{aligned}
-        \cos[2](\theta) &amp;= \frac{1}{2}\left(\cos(2\theta) + 1\right),\\
+        \cos^2(\theta) &amp;= \frac{1}{2}\left(\cos(2\theta) + 1\right),\\
         \sin(2\theta) &amp;= 2\sin(\theta)\cos(\theta).
     \end{aligned}\]</span></p></li>
-<li><p>Express <span class="math inline">\(\sin[5](\theta)\)</span> in terms of sines of integer multiples of
-<span class="math inline">\(\theta\)</span>. Hence calculate <span class="math inline">\(\int\sin[5](\theta)\text{d}\theta\)</span>.</p></li>
-<li><p>Express <span class="math inline">\(\cos[2](\theta)\sin[4](\theta)\)</span> as linear combinations of
+<li><p>Express <span class="math inline">\(\sin^5(\theta)\)</span> in terms of sines of integer multiples of
+<span class="math inline">\(\theta\)</span>. Hence calculate <span class="math inline">\(\int\sin^5(\theta)\text{d}\theta\)</span>.</p></li>
+<li><p>Express <span class="math inline">\(\cos^2(\theta)\sin^4(\theta)\)</span> as linear combinations of
 cosines of integer multiples of <span class="math inline">\(\theta\)</span>.</p></li>
 <li><p>Use your answer to the last question to compute
-<span class="math inline">\(\mathlarger{\int_{0}^{\frac{\pi}{6}}}\cos[2](\theta)\sin[4](\theta)\text{d}\theta\)</span>.</p></li>
+<span class="math inline">\(\int_{0}^{\frac{\pi}{6}}\cos^2(\theta)\sin^4(\theta)\text{d}\theta\)</span>.</p></li>
 </ol>
 </div>
 <div id="roots" class="section level2 hasAnchor" number="6.9">
 <h2><span class="header-section-number">6.9</span> Roots<a href="practice-problems.html#roots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Find the following roots and give your answers in the form <span class="math inline">\(a + bi\)</span>
-where <span class="math inline">\(a, b \in \mathds{R}\)</span>.</p>
+where <span class="math inline">\(a, b \in \mathbb{R}\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li><p>The square roots of <span class="math inline">\(4i\)</span>.</p></li>
 <li><p>The square roots of <span class="math inline">\(2 + 2\sqrt{3}i\)</span>.</p></li>
@@ -369,7 +369,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

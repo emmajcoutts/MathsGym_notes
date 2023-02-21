@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Problem Solutions | Complex Numbers</title>
   <meta name="description" content="Summary notes, introducing key concepts in Complex Numbers. There are relevant exercises and solutions to practice the techniques covered in the notes." />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Problem Solutions | Complex Numbers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Emma Coutts" />
 
 
-<meta name="date" content="2022-08-24" />
+<meta name="date" content="2023-02-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -197,7 +197,7 @@
 <div id="polar-co-ordinates-1" class="section level2 hasAnchor" number="7.6">
 <h2><span class="header-section-number">7.6</span> Polar co-ordinates<a href="problem-solutions.html#polar-co-ordinates-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li><p>For <span class="math inline">\(z = a + bi\)</span> with <span class="math inline">\(a,b \in \mathds{R}\)</span> the modulus is
+<li><p>For <span class="math inline">\(z = a + bi\)</span> with <span class="math inline">\(a,b \in \mathbb{R}\)</span> the modulus is
 <span class="math inline">\(\left|z\right| = \sqrt{a^2 + b^2}\)</span>. To find the principal value of
 the argument, <span class="math inline">\(\text{Arg}(z)\)</span>, use the Argand diagram for <span class="math inline">\(z\)</span>.
 Remember that it is not enough to simply compute
@@ -263,7 +263,7 @@ in polar form state are:</p>
 <li><p><span class="math inline">\(\frac{z_1}{z_2} = \frac{r_1}{r_2}\text{cis}\left(\theta_1 - \theta_2\right)\)</span></p></li>
 </ul>
 <p>For the complex number <span class="math inline">\(z = r\text{cis}(\theta)\)</span>, and integer
-<span class="math inline">\(n\in\mathds{Z}\)</span>, de Moivre’s theorem states that
+<span class="math inline">\(n\in\mathbb{Z}\)</span>, de Moivre’s theorem states that
 <span class="math inline">\(z^{n} = r^{n}\text{cis}(n\theta)\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li><p>The respective polar forms are
@@ -283,7 +283,10 @@ Moivre’s theorem.</p>
 <li><p><span class="math inline">\(z = \frac{\left(2\text{cis}\left(\frac{\pi}{3}\right)\right)^2}{\left(2\sqrt{2}\text{cis}\left(\frac{\pi}{4}\right)\right)^3} = \frac{1}{4\sqrt{2}}\text{cis}\left(\frac{2\pi}{3} - \frac{3\pi}{4}\right) = \frac{1}{16}\text{cis}\left(- \frac{\pi}{12}\right)\)</span></p></li>
 <li><p><span class="math inline">\(z = \sqrt{2}^{10}\text{cis}\left(\frac{10\pi}{4}\right) + \sqrt{2}^{10}\text{cis}\left(-\frac{10\pi}{4}\right) = 2(\sqrt{2})^{10}\left(\text{cis}(\frac{\pi}{2})+\text{cis}(\frac{-\pi}{2})\right) = 2(\sqrt{2})^{10}(i-i) = 0\)</span></p></li>
 <li><p><span class="math inline">\(z = \left(2\text{cis}(\frac{5\pi}{6})\right)^{-5} = \frac{1}{32}\text{cis}\left(-\frac{25\pi}{6}\right) = \frac{1}{32}\text{cis}\left(-\frac{\pi}{6}\right)\)</span></p></li>
-<li><p><span class="math inline">\(z = \frac{\left(\cos\left(\theta\right) + i\sin\left(\theta\right)\right)^4}{\left(\sin\left(\theta\right) + i\cos\left(\theta\right)\right)^2} = \frac{\text{cis}\left(4\theta\right)}{\left[i\left(\cos\theta - i\sin\theta\right)\right]^2} = -\frac{\text{cis}\left(4\theta\right)}{\left(\cos(-\theta) + i\sin(-\theta)\right)^2} = -\frac{\text{cis}\left(4\theta\right)}{\text{cis}\left(-2\theta\right)} = -\text{cis}\left(6\theta\right)\)</span></p></li>
+<li><p><span class="math display">\[\begin{aligned}
+z &amp;= \frac{\left(\cos\left(\theta\right) + i\sin\left(\theta\right)\right)^4}{\left(\sin\left(\theta\right) + i\cos\left(\theta\right)\right)^2} = \frac{\text{cis}\left(4\theta\right)}{\left[i\left(\cos\theta - i\sin\theta\right)\right]^2}\\ &amp;= -\frac{\text{cis}\left(4\theta\right)}{\left(\cos(-\theta) + i\sin(-\theta)\right)^2}
+= -\frac{\text{cis}\left(4\theta\right)}{\text{cis}\left(-2\theta\right)} = -\text{cis}\left(6\theta\right)
+\end{aligned}\]</span></p></li>
 </ol></li>
 </ol>
 </div>
@@ -292,30 +295,31 @@ Moivre’s theorem.</p>
 <ol style="list-style-type: decimal">
 <li><p>Using de Moivre’s theorem we have that <span class="math display">\[\begin{aligned}
             \cos\left(3\theta\right) + i\sin\left(3\theta\right) &amp;= \left(\cos(\theta) + i\sin(\theta)\right)^3\\
-            &amp; =\cos^3\left(\theta\right) + 3\cos^2\theta i\sin\theta + 3\cos\theta(i\sin\theta)^2 + (i\sin\theta)^3\\
-            &amp; = \cos(\theta)\left(\cos[2](\theta)-3\sin[2](\theta)\right) + i\sin(\theta)\left(3\cos[2](\theta)-\sin[2](\theta)\right)
+            &amp; =\cos^3\left(\theta\right) + 3\cos^2(\theta) i\sin(\theta) + 3\cos(\theta)(i\sin(\theta)^2 + (i\sin(\theta)^3\\
+            &amp; = \cos(\theta)\left(\cos^2(\theta)-3\sin^2(\theta)\right) + i\sin(\theta)\left(3\cos^2(\theta)-\sin^2(\theta)\right)
         \end{aligned}\]</span> Now by Equating real and imaginary parts we
 get <span class="math display">\[\begin{aligned}
-        \cos(3\theta) = \cos(\theta)\left(\cos[2](\theta)-3\sin[2](\theta)\right),\\
-        \sin\left(3\theta\right) = \sin(\theta)\left(3\cos[2](\theta)-\sin[2](\theta)\right).
+        \cos(3\theta) = \cos(\theta)\left(\cos^2(\theta)-3\sin^2(\theta)\right),\\
+        \sin\left(3\theta\right) = \sin(\theta)\left(3\cos^2(\theta)-\sin^2(\theta)\right).
         \end{aligned}\]</span></p></li>
 <li><p>Using de Moivre’s theorem we have that. <span class="math display">\[\begin{aligned}
             \cos(2\theta) + i\sin(2\theta)&amp;= \left(\cos(\theta) + i\sin(\theta)\right)^2\\
-            &amp; = \cos[2](\theta) - \sin[2](\theta) + 2i\sin(\theta)\cos(\theta)\\
-            &amp; = 2\cos[2](\theta) - 1 + 2i\sin(\theta)\cos(\theta).
+            &amp; = \cos^2(\theta) - \sin^2(\theta) + 2i\sin(\theta)\cos(\theta)\\
+            &amp; = 2\cos^2(\theta) - 1 + 2i\sin(\theta)\cos(\theta).
         \end{aligned}\]</span> Now by equating real and imaginary parts we
 get <span class="math display">\[\begin{aligned}
-            \cos[2](\theta) &amp;= \frac{1}{2}\left(\cos(2\theta) + 1\right),\\
+            \cos^2(\theta) &amp;= \frac{1}{2}\left(\cos(2\theta) + 1\right),\\
             \sin(2\theta) &amp;= 2\sin(\theta)\cos(\theta).
         \end{aligned}\]</span></p></li>
 <li><p>Let <span class="math inline">\(z = \text{cis}\left(\theta\right)\)</span> and so
 <span class="math inline">\(\frac{1}{z} = (\text{cis}(\theta))^{-1} = \cos\theta - i\sin\theta\)</span>.
 It follows that
 <span class="math inline">\(\sin\left(\theta\right) = -\frac{i}{2}\left(z - \frac{1}{z}\right)\)</span>.
-Therefore, <span class="math display">\[\begin{aligned}
-            \sin[5](\theta) &amp;= \left(-\frac{i}{2}\right)^5\left(z - \frac{1}{z}\right)^5\\
-            &amp;= -\frac{i}{32}\left[z^5\left(-\frac{1}{z}\right)^0 + 5z^4\left(-\frac{1}{z}\right) + 10z^3\left(-\frac{1}{z}\right)^2 + 10z^2\left(-\frac{1}{z}\right)^3 + 5z\left(-\frac{1}{z}\right)^4 + z^0\left(-\frac{1}{z}\right)^5\right]\\
-            &amp;=-\frac{i}{32}\left[z^5 - 5z^3 + 10z - \frac{10}{z} + \frac{5}{z^3} - \frac{1}{z^5}\right]\\
+Therefore, starting with the binomial expansion: <span class="math display">\[\begin{aligned}
+            \sin^5(\theta) &amp;= \left(-\frac{i}{2}\right)^5\left(z - \frac{1}{z}\right)^5\\
+            &amp;= -\frac{i}{32}\left[z^5\left(-\frac{1}{z}\right)^0 + 5z^4\left(-\frac{1}{z}\right) + 10z^3\left(-\frac{1}{z}\right)^2 + 10z^2\left(-\frac{1}{z}\right)^3 + 5z\left(-\frac{1}{z}\right)^4\\
+            &amp;+z^0\left(-\frac{1}{z}\right)^5\right]\\
+&amp;=-\frac{i}{32}\left[z^5 - 5z^3 + 10z - \frac{10}{z} + \frac{5}{z^3} - \frac{1}{z^5}\right]\\
             &amp;=-\frac{i}{32}\left[\left(z^5 - \frac{1}{z^5}\right) - 5\left(z^3 - \frac{1}{z^3}\right) + 10\left(z - \frac{1}{z}\right)\right]\\
             &amp; = \frac{1}{16}\left[\sin(5\theta) - 5\sin(3\theta) + 10\sin(\theta)\right].
         \end{aligned}\]</span> This means that <span class="math display">\[\begin{aligned}
@@ -326,17 +330,17 @@ Therefore, <span class="math display">\[\begin{aligned}
 by equating real and imaginary parts, as in Q1 of this subsection.</p></li>
 <li><p>Let <span class="math inline">\(z = \text{cis}\left(\theta\right)\)</span>. It follows that
 <span class="math display">\[\begin{aligned}
-            \cos[2](\theta)\sin[4](\theta) &amp;= \cos[2](\theta)\left(i\sin(\theta)\right)^4\\
+            \cos^2(\theta)\sin^4(\theta) &amp;= \cos^2(\theta)\left(i\sin(\theta)\right)^4\\
             &amp;=\left(\frac{1}{2}\left(z + \frac{1}{z}\right)\right)^2\left(\frac{1}{2}\left(z - \frac{1}{z}\right)\right)^4\\
             &amp;=\frac{1}{64}\left[\left(z^6 + \frac{1}{z^6}\right) - 2\left(z^4 + \frac{1}{z^4}\right) - \left(z^2 + \frac{1}{z^2}\right) + 4\right]\\
             &amp; = \frac{1}{32}\left(\cos(6\theta) - 2\cos(4\theta) - \cos(2\theta) + 2\right)
         \end{aligned}\]</span></p></li>
 <li><p>From the solution to the previous question we have that
 <span class="math display">\[\begin{aligned}
-                    \int_{0}^{\frac{\pi}{6}}\cos[2](\theta)\sin[4](\theta)\text{d}\theta &amp;= \frac{1}{32}\int_{0}^{\frac{\pi}{6}}\left(\cos(6\theta) - 2\cos(4\theta) - \cos(2\theta) + 2\right)\text{d}\theta.
+                    \int_{0}^{\frac{\pi}{6}}\cos^2(\theta)\sin^4(\theta)\text{d}\theta &amp;= \frac{1}{32}\int_{0}^{\frac{\pi}{6}}\left(\cos(6\theta) - 2\cos(4\theta) - \cos(2\theta) + 2\right)\text{d}\theta.
                 \end{aligned}\]</span> It therefore follows that
 <span class="math display">\[\begin{aligned}
-                    \int_{0}^{\frac{\pi}{6}}\cos[2](\theta)\sin[4](\theta)\text{d}\theta &amp;= \frac{1}{32}\left[\frac{1}{6}\sin(6\theta) - \frac{1}{2}\sin(4\theta) - \frac{1}{2}\sin(2\theta)+ 2\theta\right]_0^{\frac{\pi}{6}}\\
+                    \int_{0}^{\frac{\pi}{6}}\cos^2(\theta)\sin^4(\theta)\text{d}\theta &amp;= \frac{1}{32}\left[\frac{1}{6}\sin(6\theta) - \frac{1}{2}\sin(4\theta) - \frac{1}{2}\sin(2\theta)+ 2\theta\right]_0^{\frac{\pi}{6}}\\
                     &amp; = \frac{1}{32}\left[-\frac{\sqrt{3}}{2} + \frac{\pi}{3}\right].
                 \end{aligned}\]</span></p></li>
 </ol>
@@ -345,35 +349,35 @@ by equating real and imaginary parts, as in Q1 of this subsection.</p></li>
 <h2><span class="header-section-number">7.9</span> Roots<a href="problem-solutions.html#roots-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>In polar form <span class="math display">\[\begin{aligned}
-            4i = 4\text{cis}\left(\frac{\pi}{2} + 2k\pi\right),\quad k \in\mathds{Z}\implies w_k = \left(4i\right)^{\frac{1}{2}} = 2\text{cis}\left(\frac{\pi}{4} + k\pi\right), \quad k = 0, 1.
+            4i = 4\text{cis}\left(\frac{\pi}{2} + 2k\pi\right),\quad k \in\mathbb{Z}\implies w_k = \left(4i\right)^{\frac{1}{2}} = 2\text{cis}\left(\frac{\pi}{4} + k\pi\right), \quad k = 0, 1.
         \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
             w_0 &amp;= 2\text{cis}\left(\frac{\pi}{4}\right) = \sqrt{2} + \sqrt{2}i,\\
             w_1 &amp; =
             2\text{cis}\left(\frac{5\pi}{4}\right) = -\sqrt{2} - \sqrt{2}i.
         \end{aligned}\]</span></p></li>
 <li><p>In polar form <span class="math display">\[\begin{aligned}
-            2 + 2\sqrt{3}i = 4\text{cis}\left(\frac{\pi}{3} + 2k\pi\right),\quad k \in\mathds{Z}\implies w_k = \left(2 + 2\sqrt{3}i\right)^{\frac{1}{2}} = 2\text{cis}\left(\frac{\pi}{6} + k\pi\right), \quad k = 0, 1.
+            2 + 2\sqrt{3}i = 4\text{cis}\left(\frac{\pi}{3} + 2k\pi\right),\quad k \in\mathbb{Z}\implies w_k = \left(2 + 2\sqrt{3}i\right)^{\frac{1}{2}} = 2\text{cis}\left(\frac{\pi}{6} + k\pi\right), \quad k = 0, 1.
         \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
             w_0 &amp;= 2\text{cis}\left(\frac{\pi}{6}\right) = \sqrt{3} + i,\\
             w_1 &amp; =
             2\text{cis}\left(\frac{7\pi}{6}\right) = -\sqrt{3} -i.
         \end{aligned}\]</span></p></li>
 <li><p>In polar form <span class="math display">\[\begin{aligned}
-            -27 = 27\text{cis}\left(\pi + 2k\pi\right),\quad k \in\mathds{Z}\implies w_k = \left(-27\right)^{\frac{1}{3}} = 3\text{cis}\left(\frac{\pi}{3} + \frac{2k\pi}{3}\right), \quad k = 0, 1, 2.
+            -27 = 27\text{cis}\left(\pi + 2k\pi\right),\quad k \in\mathbb{Z}\implies w_k = \left(-27\right)^{\frac{1}{3}} = 3\text{cis}\left(\frac{\pi}{3} + \frac{2k\pi}{3}\right), \quad k = 0, 1, 2.
         \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
             w_0 &amp;= 3\text{cis}\left(\frac{\pi}{3}\right) = \frac{3}{2} + \frac{3\sqrt{3}}{2}i,\\
             w_1 &amp; = 3\text{cis}\left(\pi\right) = -3,\\
             w_2 &amp; = 3\text{cis}\left(\frac{5\pi}{3}\right) = \frac{3}{2} - \frac{3\sqrt{3}}{2}i,
         \end{aligned}\]</span></p></li>
 <li><p>In polar form <span class="math display">\[\begin{aligned}
-            8i = 8\text{cis}\left(\frac{\pi}{2} + 2k\pi\right),\quad k \in\mathds{Z}\implies w_k = \left(8i\right)^{\frac{1}{3}} = 2\text{cis}\left(\frac{\pi}{6} + \frac{2k\pi}{3}\right), \quad k = 0, 1, 2.
+            8i = 8\text{cis}\left(\frac{\pi}{2} + 2k\pi\right),\quad k \in\mathbb{Z}\implies w_k = \left(8i\right)^{\frac{1}{3}} = 2\text{cis}\left(\frac{\pi}{6} + \frac{2k\pi}{3}\right), \quad k = 0, 1, 2.
         \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
             w_0 &amp;= 2\text{cis}\left(\frac{\pi}{6}\right) = \sqrt{3} + i,\\
             w_1 &amp; = 2\text{cis}\left(\frac{5\pi}{6}\right) = -\sqrt{3} + i,\\
             w_2 &amp; = 2\text{cis}\left(\frac{3\pi}{2}\right) = - 2i,
         \end{aligned}\]</span></p></li>
 <li><p>In polar form <span class="math display">\[\begin{aligned}
-            &amp;-8 - 8\sqrt{3}i = 16\text{cis}\left(\frac{4\pi}{3} + 2k\pi\right)\quad k \in\mathds{Z}\\
+            &amp;-8 - 8\sqrt{3}i = 16\text{cis}\left(\frac{4\pi}{3} + 2k\pi\right)\quad k \in\mathbb{Z}\\
             \implies&amp; w_k = \left(-8 - 8\sqrt{3}i\right)^{\frac{1}{4}} = 2\text{cis}\left(\frac{\pi}{3} + \frac{k\pi}{2}\right), \quad k = 0, 1, 2, 3.
         \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
             w_0 &amp;= 2\text{cis}\left(\frac{\pi}{3}\right) = 1 + \sqrt{3}i,\\
@@ -382,7 +386,7 @@ by equating real and imaginary parts, as in Q1 of this subsection.</p></li>
             w_3 &amp; = 2\text{cis}\left(\frac{11\pi}{6}\right) = \sqrt{3} - i.
         \end{aligned}\]</span></p></li>
 <li><p>In polar form <span class="math display">\[\begin{aligned}
-            &amp; 729 = 729\text{cis}\left(2k\pi\right)\quad k \in\mathds{Z}
+            &amp; 729 = 729\text{cis}\left(2k\pi\right)\quad k \in\mathbb{Z}
             \implies w_k = 729^{\frac{1}{6}} = 3\text{cis}\left(\frac{k\pi}{3}\right), \quad k = 0, 1, 2, 3, 4, 5.
         \end{aligned}\]</span> Therefore <span class="math display">\[\begin{aligned}
             w_0 &amp;= 3\\
@@ -462,7 +466,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
